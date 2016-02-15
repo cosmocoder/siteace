@@ -1,0 +1,134 @@
+/**** Header ****/
+
+.page-header h1 {
+	margin: 0;
+	line-height: 1;
+}
+
+.header-buttons {
+	text-align: right;
+
+	& > * {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+
+		&::last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+
+
+.site-search {
+	position: relative;
+
+	& > a {
+		font-size: 20px;
+		line-height: 1;
+		text-decoration: none;
+		color: #333;
+		display: inline-block;
+		padding: 6px 12px;
+	}
+
+	.search-btn {
+		width: 44px;
+		height: 35px;
+	}
+
+	.close-icon {
+		display: none;
+	}
+
+	input {
+		position: absolute;
+		right: 0;
+		top: 100%;
+		margin-top: 9px;
+		width: 250px;
+		border-radius: 0 0 5px 5px;
+		background: #FAFAFA;
+		border: 1px solid #eee;
+		display: none;
+	}
+
+	&.active  {
+		.search-icon {
+			display: none;
+		}
+
+		.close-icon {
+			display: inline-block;
+		}
+
+		input {
+			display: inline-block;
+		}
+	}
+}
+
+
+
+/**** Homepage list ****/
+
+#vote-alert {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	display: none;
+}
+
+#website_list {
+	padding: 0;
+	list-style: none;
+	counter-reset: weblist;
+
+	li:not(:last-child) {
+		padding-bottom: 20px;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 20px;
+	}
+
+	h4 {
+		line-height: 1.4;
+
+		&:before {
+			counter-increment: weblist;
+			content: counters(weblist,'.') '. ';
+			color: #333;
+			font-size: 14px;
+		}
+	}
+
+	.item-meta {
+		margin-top: 40px;
+
+		> * {
+			vertical-align: middle;
+		}
+
+		.counter {
+			margin-right: 5px;
+		}
+
+		.downvote-counter {
+			margin-left: 10px;
+		}
+	}
+}
+
+/*** Form for adding websites ***/
+
+#website_form .alert {
+	margin-left: 20px;
+	display: none;
+}
+
+/*** Comments section ***/
+
+.comments-box {
+	padding: 0;
+}

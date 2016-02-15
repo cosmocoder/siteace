@@ -1,0 +1,26 @@
+<template name="home_header">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-md-8">
+				<h1>List of Websites</h1>
+			</div>
+
+			<div class="col-md-4 header-buttons">
+				{{#if currentUser}}
+					<a class="btn btn-default js-toggle-website-form" href="#">
+				  		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</a>
+				{{/if}}
+
+				<span class="site-search">
+					<a href="#" class="search-btn">
+						<span class="glyphicon glyphicon-search search-icon" aria-hidden="true"></span>
+						<span class="close-icon" aria-label="Close" aria-hidden="true">&times;</span>
+					</a>
+
+					<input type="search" class="form-control" placeholder="Search for sites">
+				</span>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,41 @@
+<!-- modal template for website add form -->
+<template name="website_form">
+	<div class="modal fade" id="website_form">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Add a new site</h4>
+				</div>
+
+				<div class="modal-body">
+					<form class="js-save-website-form">
+						<div class="form-group">
+							<label for="url">Site address</label>
+							<input type="url" class="form-control" name="url" id="url" required placeholder="http://www.mysite.com">
+						</div>
+
+						<div class="form-group">
+							<label for="title">Title (optional)</label>
+							<input type="text" class="form-control" name="title" id="title" placeholder="Mysite">
+						</div>
+
+						<div class="form-group">
+							<label for="description">Description (optional)</label>
+							<textarea class="form-control" name="description" id="description" placeholder="I found this site really useful for ..."></textarea>
+					  	</div>
+
+					  <button type="submit" class="btn btn-success">Submit</button>
+
+					  <span class="alert alert-success" id="insert-success" role="alert">Site added</span>
+					  <span class="alert alert-info" id="insert-info" role="alert">Please wait&hellip;</span>
+					  <span class="alert alert-danger" id="insert-error" role="alert">Something went wrong.</span>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,18 @@
+<!-- template that displays several website items -->
+<template name="website_list">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="alert alert-warning" id="vote-alert" role="alert">You need to log in before you can vote.</div>
+
+			{{#if websites}}
+				<ol id="website_list">
+					{{#each websites}}
+						{{>website_item}}
+					{{/each}}
+				</ol>
+			{{else}}
+				<p>No sites found.</p>
+			{{/if}}
+		</div>
+	</div>
+</template>

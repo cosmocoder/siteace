@@ -1,0 +1,15 @@
+<template name="details_page">
+	{{#if Template.subscriptionsReady}}
+		<div class="page-header">
+			<h1>{{title}}</h1>
+		</div>
+
+		{{> site_description}}
+
+		<hr class="divider">
+
+		{{> comments}}
+	{{else}}
+		<p>Loading...</p>
+	{{/if}}
+</template>
